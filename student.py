@@ -69,15 +69,22 @@ class Student():
         except AttributeError:
             return ""
 
+    def __str__(self):
+        return f"{self.full_name} is {self.age} years old and is in cohort {self.cohort_number}."
+
+    def __repr__(self):
+        return f"{self.full_name} is {self.age} years old and is in cohort {self.cohort_number}"
+
 
 
 l = Student()
-l.first_name = "james"
-l.last_name = "chapman"
+l.first_name = "James"
+l.last_name = "Chapman"
 l.age = 33
 l.cohort_number= 36
 
-l.first_name = "terry"
 
+
+print(l)
 print(l.full_name)
 
